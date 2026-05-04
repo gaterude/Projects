@@ -9,3 +9,5 @@ Node.js allows JavaScript to run outside the browser. It also comes with npm whi
 
 ## Terminal
 The terminal is where commands are typed to control the computer and projects. I used it to run Git commands and check versions of installed tools. It is important because many developer tasks are done through it.
+
+I installed the GitLens extension in VS Code because it improves how I understand Git history. It shows changes and  when they were made. This helps me track code changes more easily and understand my project development better, especially when working with multiple commits.
