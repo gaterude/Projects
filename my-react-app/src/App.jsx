@@ -1,16 +1,50 @@
-import ProfileCard from "./components/ProfileCard";
-import myImage from "./assets/myphoto.jpeg";
+import Button from "./components/Button";
+import Card from "./components/Card";
+import Container from "./components/Container";
+import Grid from "./components/Grid";
 
 function App() {
+  const cards = [
+    {
+      id: 1,
+      title: "Home",
+      body: "Welcome home",
+    },
+
+    {
+      id: 2,
+      title: "About",
+      body: "About us",
+    },
+
+    {
+      id: 3,
+      title: "Contact",
+      body: "Get in touch",
+    },
+  ];
+
   return (
-    <div>
-      <ProfileCard
-        name="Gaterude Michira"
-        role="Frontend Developer"
-        bio="I love building React apps"
-        image={myImage}
-      />
-    </div>
+    <Container>
+      <Grid>
+        {cards.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            renderFooter={() => (
+              <Button
+                variant="secondary"
+                onClick={() => alert(card.title)}
+              >
+                Click Me
+              </Button>
+            )}
+          >
+            <p>{card.body}</p>
+          </Card>
+        ))}
+      </Grid>
+    </Container>
   );
 }
 
