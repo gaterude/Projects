@@ -1,0 +1,5 @@
+When a user types a URL the browser contacts DNS to find the IP address. DNS helps change the URL into an IP address so the browser can know where to go. The browser then uses this IP address to send a request to the server using HTTP. The server receives the request and processes it to find the requested page. After processing, the server sends back an HTML page. The browser reads the HTML and displays the page on the screen.
+
+The browser may also request other files to make the page look complete. All these actions happen very fast within seconds when a webpage loads. Different servers around the world help store and send websites to users through the Internet.
+
+The Internet is a network of connected computers, while the World Wide Web is a collection of web pages that run on the Internet.
