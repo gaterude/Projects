@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Lab</title>
+
+  <link rel="stylesheet" href="styles/layout.css">
+</head>
+
+<body>
+
+  <header>Site Header</header>
+
+  <nav>Top Nav</nav>
+
+  <main class="clearfix">
+
+    <article>
+
+      <h2>Main Article</h2>
+
+      <p>
+        This is the main article section.
+      </p>
+
+      <div class="position-parent">
+
+        <div class="demo demo--static">
+          static (default)
+        </div>
+
+        <div class="demo demo--relative">
+          relative (nudged 20px right)
+        </div>
+
+        <div class="demo demo--absolute">
+          absolute (pinned top-right of parent)
+        </div>
+
+      </div>
+
+      <div class="demo demo--sticky">
+        sticky (sticks after scroll)
+      </div>
+
+    </article>
+
+    <aside>
+
+      <h3>Sidebar</h3>
+
+      <p>
+        Sidebar content goes here.
+      </p>
+
+    </aside>
+
+  </main>
+
+  <footer>Site Footer</footer>
+
+  <div class="demo demo--fixed">
+    fixed (stays visible on scroll)
+  </div>
+
+</body>
+</html>
