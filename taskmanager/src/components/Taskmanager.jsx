@@ -1,7 +1,9 @@
 import { useState } from "react";
+import "./taskmanager.css";
 
 function TaskManager() {
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("all");
   const [input, setInput] = useState("");
 
   function addTask() {
@@ -31,6 +33,12 @@ function TaskManager() {
     setTasks(tasks.filter((task) => task.id !== id));
   }
 
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "active") return !task.completed;
+    if (filter === "completed") return task.completed;
+    return true;
+  });
+
   return (
     <div>
       <h2>Task Manager</h2>
@@ -49,23 +57,41 @@ function TaskManager() {
 
       <button onClick={addTask}>Add</button>
 
+    <div className="filters">
+  <button
+    className={filter === "all" ? "active-filter" : ""}
+    onClick={() => setFilter("all")}
+  >
+    All
+  </button>
+
+  <button
+    className={filter === "active" ? "active-filter" : ""}
+    onClick={() => setFilter("active")}
+  >
+    Active
+  </button>
+
+  <button
+    className={filter === "completed" ? "active-filter" : ""}
+    onClick={() => setFilter("completed")}
+  >
+    Completed
+  </button>
+</div>
+
       {tasks.length === 0 ? (
-        <p>add your first task above</p>
+        <p>Add your first task above</p>
       ) : (
         <ul>
-          {tasks.map((task) => (
+          {filteredTasks.map((task) => (
             <li key={task.id}>
-              <span
-                onClick={() => toggleTask(task.id)}
-                style={{
-                  textDecoration: task.completed
-                    ? "line-through"
-                    : "none",
-                  cursor: "pointer",
-                }}
-              >
-                {task.text}
-              </span>
+             <span
+  onClick={() => toggleTask(task.id)}
+  className={task.completed ? "completed" : ""}
+>
+  {task.text}
+</span>
 
               <button onClick={() => deleteTask(task.id)}>
                 Delete
@@ -76,8 +102,7 @@ function TaskManager() {
       )}
 
       <p>
-        {tasks.filter((task) => !task.completed).length} tasks
-        remaining
+        {tasks.filter((task) => !task.completed).length} tasks remaining
       </p>
     </div>
   );

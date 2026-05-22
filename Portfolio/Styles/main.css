@@ -1,0 +1,66 @@
+body {
+  background: #f0f0f0;
+}
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1f2937;
+  --color-accent: #2563eb;
+  --color-muted: #6b7280;
+
+  --font-body: Georgia, serif;
+  --font-heading: Helvetica, sans-serif;
+
+  --spacing-unit: 8px;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+}
+
+nav {
+  padding: calc(var(--spacing-unit) * 2);
+}
+
+p {
+  color: var(--color-muted);
+}
+
+a {
+  color: var(--color-accent);
+}
+/* margin = outside spacing, padding = inside spacing, border = visible boundary */
+article {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 20px;
+  border: 2px solid var(--color-muted);
+  background-color: var(--color-bg);
+}
+/* Element selector because all h1 headings should share the same style */
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Class selector because multiple elements can reuse this style */
+.tag {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ID selector because hero is a unique section on the homepage */
+#hero {
+  text-align: center;
+  padding: 64px 16px;
+}

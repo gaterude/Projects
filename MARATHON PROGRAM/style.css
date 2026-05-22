@@ -1,0 +1,135 @@
+:root {
+    --color-bg: #0a0a0f;
+    --color-text: #e5e5e5;
+    --color-accent: #a855f7;
+    --color-muted: #9ca3af;
+    --color-card: #11111a;
+    --color-border: #444444;
+
+    --font-body: "Segoe UI", Arial, sans-serif;
+    --font-heading: "Trebuchet MS", sans-serif;
+
+    --spacing-unit: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+}
+
+/* Element selector because all headings should look consistent */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background-color: var(--color-card);
+    padding: var(--spacing-unit);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    background-color: var(--color-card);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* ===== ABOUT SECTION ===== */
+section#about article {
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    margin-top: 15px;
+}
+
+/* ===== BLOG SECTION ===== */
+#blog article {
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    margin-top: 15px;
+}
+
+/* ===== PROJECTS ===== */
+.project-container {
+    display: grid;
+    gap: 20px;
+}
+
+/* Class selector because multiple project cards reuse the same design */
+/* margin = outside spacing; padding = inside spacing; border = edge line; max-width = controls content size */
+.project-card {
+    background-color: var(--color-card);
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid var(--color-border);
+    max-width: 500px;
+}
+
+/* ID selector because the contact section is unique on the page */
+#contact {
+    padding: 20px;
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+#contact button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+}
+
+/* Element selector because all links should share the same hover style */
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        width: 95%;
+    }
+}

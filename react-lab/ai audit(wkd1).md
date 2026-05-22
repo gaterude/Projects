@@ -1,0 +1,2 @@
+I used AI to help with debugging my code and clean an proper arrangment of my code i used term such as"arrange my code properly without changing a thing"
+I also used it to explain concept of exporting and imorting which i had not clearly understood
