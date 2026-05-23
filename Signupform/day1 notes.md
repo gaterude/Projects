@@ -1,0 +1,3 @@
+# Day 1 Notes
+
+Controlled inputs are called "controlled" because React controls the input values through state. Every time the user types, the state updates and React re-renders the input with the new value. If I used uncontrolled inputs instead, the form data would be handled directly by the DOM using refs instead of React state. I learned that simple email validation is usually enough for beginner projects, and production-level validation is often handled differently. I also learned that controlled inputs make validation and conditional rendering much easier in React.
